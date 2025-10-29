@@ -1,0 +1,392 @@
+/* WasteSortingGame.css */
+.game-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fff9 0%, #e8f5e9 100%);
+  position: relative;
+}
+
+.back-button {
+  background: linear-gradient(135deg, #666, #555);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: linear-gradient(135deg, #555, #444);
+  transform: translateX(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.2rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.score-display, .progress-display, .combo-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+}
+
+.score-icon, .progress-icon, .combo-icon {
+  font-size: 1.5rem;
+}
+
+.score-value {
+  color: #FFD700;
+  font-size: 1.3rem;
+}
+
+.progress-value {
+  color: #4CAF50;
+  font-size: 1.3rem;
+}
+
+.combo-value {
+  color: #FF6B00;
+  font-size: 1.3rem;
+}
+
+.current-item-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2.5rem;
+  border-radius: 25px;
+  margin: 2rem 0;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  text-align: center;
+  border: 3px solid #4CAF50;
+  backdrop-filter: blur(10px);
+}
+
+.item-emoji {
+  font-size: 5rem;
+  display: block;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(5deg); }
+}
+
+.item-name {
+  color: #2E7D32;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+
+.item-type-hint {
+  color: #5a7c69;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.feedback {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.2rem 2rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.feedback.correct {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+  border: 2px solid #81C784;
+}
+
+.feedback.incorrect {
+  background: linear-gradient(135deg, #F44336, #D32F2F);
+  color: white;
+  border: 2px solid #EF5350;
+}
+
+.fact-card {
+  background: linear-gradient(135deg, #FFF3E0, #FFE0B2);
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  margin: 1.5rem 0;
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.2);
+  text-align: center;
+  border-left: 4px solid #FF9800;
+}
+
+.fact-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.fact-text {
+  color: #EF6C00;
+  font-weight: 600;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.bins-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.bin {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 2px solid transparent;
+}
+
+.bin:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.compost-bin {
+  border-color: #4CAF50;
+  background: linear-gradient(135deg, #E8F5E9, #C8E6C9);
+}
+
+.recycle-bin {
+  border-color: #2196F3;
+  background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+}
+
+.trash-bin {
+  border-color: #F44336;
+  background: linear-gradient(135deg, #FFEBEE, #FFCDD2);
+}
+
+.bin-emoji {
+  font-size: 3.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.bin-title {
+  color: #2E7D32;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.bin-description {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.bin-examples {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 1.5rem;
+}
+
+.game-tips {
+  text-align: center;
+  margin-top: 2rem;
+  color: #5a7c69;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.game-start {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3rem;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 16px 50px rgba(0,0,0,0.15);
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.game-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.game-description {
+  color: #5a7c69;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.instructions {
+  background: rgba(232, 245, 233, 0.5);
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.instructions h3 {
+  color: #2E7D32;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.instruction-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.bin-demo {
+  font-size: 1.8rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.compost-demo { background: #E8F5E9; }
+.recycle-demo { background: #E3F2FD; }
+.trash-demo { background: #FFEBEE; }
+
+.combo-tip {
+  color: #FF6B00;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.start-btn, .play-again-btn {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+  border: none;
+  padding: 1.3rem 2.8rem;
+  font-size: 1.3rem;
+  border-radius: 35px;
+  cursor: pointer;
+  margin-top: 2rem;
+  box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover, .play-again-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(76, 175, 80, 0.6);
+}
+
+.game-over {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 3.5rem;
+  border-radius: 35px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  backdrop-filter: blur(20px);
+  border: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.trophy {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  animation: spin 2s ease-in-out;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg) scale(0); }
+  50% { transform: rotate(180deg) scale(1.5); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.final-score {
+  font-size: 1.8rem;
+  margin: 1.5rem 0;
+}
+
+.final-score span {
+  color: #4CAF50;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.stats {
+  color: #5a7c69;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.combo-achievement {
+  color: #FF6B00;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-container {
+    padding: 1rem;
+  }
+  
+  .bins-container {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .game-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .current-item-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .item-emoji {
+    font-size: 4rem;
+  }
+  
+  .item-name {
+    font-size: 1.5rem;
+  }
+  
+  .bin {
+    padding: 1.5rem 1rem;
+  }
+  
+  .bin-emoji {
+    font-size: 2.5rem;
+  }
+}

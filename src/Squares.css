@@ -1,0 +1,22 @@
+/* The class is applied directly to the <canvas>, so target it directly */
+.eco-squares {
+  position: fixed;    /* stick to viewport */
+  inset: 0;           /* top:0 right:0 bottom:0 left:0 */
+  width: 100vw;       /* <-- ensure full viewport size */
+  height: 100vh;
+  display: block;     /* avoid inline-canvas quirks */
+  z-index: 0;         /* behind content */
+  border: none;
+  pointer-events: none; /* won't block clicks; you forward mousemove already */
+}
+
+/* (optional) if you ever switch to a wrapper <div class="eco-squares"><canvas/></div>
+   you can keep this for that future case, but it's not needed now */
+/*
+.eco-squares canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+*/

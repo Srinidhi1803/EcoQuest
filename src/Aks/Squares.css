@@ -1,0 +1,16 @@
+/* src/components/Squares.css */
+.squares-canvas {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  /* keep pointer events (so hover works) — the canvas will be behind any UI on higher z-index */
+}
+
+/* optional helper class if you want the canvas to be absolutely positioned itself */
+.squares-fill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,125 @@
+.profile-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  background: #f9fff9;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.profile-header {
+  background: linear-gradient(135deg, #a0e7a0, #8fd19e);
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* image avatar */
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+}
+
+/* emoji avatar (added) */
+.profile-avatar-emoji {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid white;
+  display: grid;
+  place-items: center;
+  background: #ffffff22;
+  font-size: 52px;
+  line-height: 1;
+}
+
+.xp-card {
+  margin-top: 10px;
+  background: gold;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-weight: bold;
+  display: inline-block;
+  color: #684b00;
+}
+
+.profile-time {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* small nav buttons in header */
+.profile-navbtn {
+  border-radius: 999px;
+  padding: 8px 14px;
+  border: 1px solid #ffffff88;
+  background: #ffffff;
+  color: #0f5132;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .2s ease;
+}
+.profile-navbtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+.streak-box {
+  font-size: 20px;
+  margin: 15px auto;
+  background: #ffefef;
+  padding: 10px;
+  border-radius: 12px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.achievements {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.achievement {
+  width: 180px;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.achievement.unlocked {
+  background: #d2ffd2;
+  border: 2px solid #5cb85c;
+}
+
+.achievement.locked {
+  background: #f2f2f2;
+  border: 2px dashed #aaa;
+  opacity: 0.7;
+}
+
+.leaderboard {
+  margin-top: 20px;
+  text-align: left;
+  padding: 15px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.leaderboard-item {
+  padding: 6px;
+  font-size: 16px;
+}
+
+.leaderboard-item.me {
+  font-weight: bold;
+  color: green;
+}

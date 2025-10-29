@@ -1,0 +1,22 @@
+/* index.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #111;
+}
+
+.leaderboard-page {
+  background: #fff;
+  padding: 20px;
+}
+
+.leaderboard-page * {
+  border: none;
+  background-image: none !important;
+}

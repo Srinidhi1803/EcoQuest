@@ -1,0 +1,22 @@
+/* SplashCursorEffect.css */
+.splash-cursor-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: linear-gradient(to right, #74e2c0 60%, #6febb7);
+  opacity: 0.76;
+  animation: splash-cursor-effect 0.7s cubic-bezier(.62,.08,.3,1.12) forwards;
+  z-index: 9999;
+  transform: translate(-50%, -50%) scale(0.7);
+  will-change: transform, opacity;
+  animation-delay: calc(var(--i, 0) * 0.03s);
+}
+
+@keyframes splash-cursor-effect {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5) rotate(90deg);
+  }
+}
